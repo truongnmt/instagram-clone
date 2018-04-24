@@ -10,9 +10,16 @@
 
   <body>
     <%= render 'shared/navbar' if current_user %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
     <%= render 'shared/footer' %>
+
+    <% if flash.any? %>
+      <script type="text/javascript">
+        <% flash.each do |key, value| %>
+          <% type = key.to_s.gsub('alert', 'error').gsub('notice', 'success') %>
+          toastr.<%= type %>('<%= value %>')
+        <% end %>
+      </script>
+    <% end %>
   </body>
 </html>
