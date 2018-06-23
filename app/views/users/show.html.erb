@@ -1,0 +1,35 @@
+<div class="row justify-content-md-center profile-wrapper">
+  <div class="col-md-4 text-center">
+    <%= image_tag avatar_url(@user), width: '152', height: '152', class: "round-img" %>
+  </div>
+  <div class="col-md-8">
+    <div class="row">
+      <p class="username"><%= @user.name %></p>
+      <button class="btn btn-outline-dark common-btn edit-profile-btn">Edit Profile</button>
+      <button type="button" class="core-sprite setting" data-toggle="modal" data-target="#exampleModal"></button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Settings</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="list-group text-center">
+              <a href="#" class="list-group-item list-group-item-action">Change Password</a>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete,
+                class: "list-group-item list-group-item-action" %>
+              <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <p class="email"><%= @user.email %></p>
+    </div>
+  </div>
+</div>

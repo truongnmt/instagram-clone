@@ -10,7 +10,9 @@
 
   <body>
     <%= render 'shared/navbar' if current_user %>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
 
     <% if flash.any? %>
