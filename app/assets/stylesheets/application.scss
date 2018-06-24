@@ -200,3 +200,50 @@ footer .nav-item {
 .setting:hover {
   cursor: pointer;
 }
+
+.edit-profile-wrapper {
+  margin: 60px 0 0;
+
+  .left-col {
+    border: 1px solid #dbdbdb;
+    padding: 0;
+    background-color: white;
+
+    .list-group-item {
+      border: none;
+      color: #262626;
+      border-radius: 0;
+      font-size: 16px;
+      border-left: 2px solid transparent;
+    }
+
+    .list-group-item:first-child {
+      font-weight: bold;
+      border-left-color: #262626;
+    }
+
+    .list-group-item:not(:first-child):hover {
+      border-left-color: #dbdbdb;
+    }
+  }
+
+  .right-col {
+    border: 1px solid #dbdbdb;
+    border-left: none;
+    background-color: white;
+
+    .username-img {
+      margin: 32px 0;
+
+      .col-sm-9 {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+
+    .form-group {
+      font-size: 16px;
+    }
+  }
+}

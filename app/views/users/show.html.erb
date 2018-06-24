@@ -5,8 +5,10 @@
   <div class="col-md-8">
     <div class="row">
       <p class="username"><%= @user.name %></p>
-      <button class="btn btn-outline-dark common-btn edit-profile-btn">Edit Profile</button>
-      <button type="button" class="core-sprite setting" data-toggle="modal" data-target="#exampleModal"></button>
+      <% if @user == current_user %>
+        <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-dark common-btn edit-profile-btn" %>
+        <button type="button" class="core-sprite setting" data-toggle="modal" data-target="#exampleModal"></button>
+      <% end %>
 
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
