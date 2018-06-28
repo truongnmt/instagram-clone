@@ -1,12 +1,17 @@
 <% @posts.each do |post| %>
   <div class="card mt-3 post">
-    <div class="card-header">
+    <div class="card-header d-flex align-items-center">
       <%= link_to user_path(post.user), class: "no-text-decoration" do %>
         <%= image_tag avatar_url(post.user), class: "post-author-icon" %>
       <% end %>
       <%= link_to user_path(post.user), class: "normal-color no-text-decoration",
         title: post.user.name do %>
         <strong><%= post.user.name %></strong>
+      <% end %>
+      <% if post.is_belongs_to? current_user %>
+        <%= link_to post_path(post), method: :delete, class: "ml-auto delete-post-icon mx-0 my-auto" do %>
+          <i class="far fa-trash-alt" aria-hidden="true"></i>
+        <% end %>
       <% end %>
     </div>
 

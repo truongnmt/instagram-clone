@@ -30,13 +30,18 @@
       </div>
     </div>
     <div class="col-lg-4 col-md-5 mt-sm-4 mt-md-0">
-      <div class="row px-3">
+      <div class="row px-3 d-flex align-items-center">
         <%= link_to user_path(@post.user), class: "no-text-decoration" do %>
           <%= image_tag avatar_url(@post.user), class: "post-author-icon" %>
         <% end %>
         <%= link_to user_path(@post.user), class: "normal-color no-text-decoration d-flex align-self-center",
           title: @post.user.name do %>
           <strong><%= @post.user.name %></strong>
+        <% end %>
+        <% if @post.is_belongs_to? current_user %>
+          <%= link_to post_path(@post), method: :delete, class: "ml-auto delete-post-icon mx-0 my-auto" do %>
+            <i class="far fa-trash-alt" aria-hidden="true"></i>
+          <% end %>
         <% end %>
       </div>
       <hr class="mb-0">
