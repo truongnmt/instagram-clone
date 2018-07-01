@@ -11,4 +11,8 @@ class Post < ApplicationRecord
   def is_liked user
     Like.find_by(user_id: user.id, post_id: id)
   end
+
+  def is_bookmarked user
+    Bookmark.find_by(user_id: user.id, post_id: id)
+  end
 end
