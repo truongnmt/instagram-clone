@@ -1,0 +1,5 @@
+$('#like-icon-post-<%= @post.id.to_s %>').
+  html('<%= link_to "Loved", post_likes_path(@post), method: :post, remote: true, class: "core-sprite love hide-text" %>');
+$('#like-text-post-<%= @post.id.to_s %>').
+  html('<%= j render "posts/like_text", {likes: @post.likes} %>');
+console.log("delete like success");

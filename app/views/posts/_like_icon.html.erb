@@ -1,0 +1,7 @@
+<% if is_liked.present? %>
+  <%= link_to "Love", like_path(is_liked), method: :delete, remote: true,
+    class: "core-sprite loved hide-text" %>
+<% else %>
+  <%= link_to "Loved", post_likes_path(post), method: :post, remote: true,
+    class: "core-sprite love hide-text" %>
+<% end %>
