@@ -28,13 +28,10 @@
           <span><%= @post.content %></span>
         </div>
       <% end %>
-      <!-- load comment -->
-      <% 100.times do %>
-        <div>
-          <span><strong>kuchajka</strong></span>
-          <span>No helmets? Lol</span>
+        <!-- load comment -->
+        <div id="comment-post-<%= @post.id.to_s %>">
+          <%= render 'comment_list', post: @post %>
         </div>
-      <% end %>
       </div>
       <hr class="mt-0">
 
@@ -50,14 +47,9 @@
       </div>
       <div class="light-color post-time"><%= time_ago_in_words(@post.created_at).upcase %> AGO</div>
       <hr>
-      <div class="row actions">
-        <form action="#" class="w-100">
-          <div>
-            <textarea class="form-control comment-input border-0" placeholder="Add a comment ..." rows="1"></textarea>
-          </div>
-        </form>
+      <div class="row actions" id="comment-form-post-<%= @post.id.to_s %>">
+        <%= render 'comment_form', post: @post %>
       </div>
-
     </div>
   </div>
 </div>
