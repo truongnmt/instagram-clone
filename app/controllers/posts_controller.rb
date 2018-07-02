@@ -30,6 +30,7 @@ class PostsController < ApplicationController
     @likes = @post.likes.includes(:user)
     @comment = Comment.new
     @is_liked = @post.is_liked(current_user)
+    @is_bookmarked = @post.is_bookmarked(current_user)
   end
 
   def destroy
