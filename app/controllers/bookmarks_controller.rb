@@ -5,6 +5,7 @@ class BookmarksController < ApplicationController
     @bookmark = current_user.bookmarks.build(bookmark_params)
     if @bookmark.save
       @post = @bookmark.post
+      @is_bookmarked = @bookmark
       respond_to :js
     else
       flash[:alert] = "Something went wrong ..."
@@ -23,6 +24,6 @@ class BookmarksController < ApplicationController
 
   private
   def bookmark_params
-    params.required(:bookmark).permit :user_id, :post_id
+    params.permit :user_id, :post_id
   end
 end

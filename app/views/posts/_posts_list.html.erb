@@ -23,7 +23,9 @@
           <%= render "like_icon", {is_liked: post.is_liked(current_user), post: post} %>
         </div>
         <a href="#" class="core-sprite comment hide-text">Comment</a>
-        <a href="#" class="core-sprite bookmark hide-text ml-auto">Bookmark</a>
+        <div id="bookmark-icon-post-<%= post.id.to_s %>" class="ml-auto">
+          <%= render "bookmark_icon", {is_bookmarked: post.is_bookmarked(current_user), post: post} %>
+        </div>
       </div>
       <div id="like-text-post-<%= post.id.to_s %>">
         <%= render "like_text", {likes: post.likes} %>
