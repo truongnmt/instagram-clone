@@ -1,0 +1,15 @@
+<% posts.each do |post| %>
+  <div class="col-4">
+    <%= link_to post_path(post) do %>
+      <div class="post-stat d-flex justify-content-center align-items-center">
+        <span>
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          <%= post.likes.size %>
+          <i class="ml-3 fa fa-comment" aria-hidden="true"></i>
+          <%= post.comments.size %>
+        </span>
+      </div>
+      <%= image_tag post.photos.first.image.url(:standard), class: "card-img-top image-preview" %>
+    <% end %>
+  </div>
+<% end %>

@@ -399,3 +399,48 @@ footer .nav-item {
   float: right;
   margin: 5px 0 0 10px;
 }
+
+.profile-tab {
+  margin-top: 60px;
+
+  .nav-tabs {
+    border: 0;
+    border-top: 1px solid #ddd;
+
+    .nav-item {
+      border-radius: 0;
+      border: 0;
+      border-top: 1px solid transparent;
+      margin-top: -1px;
+      padding: 10px 0;
+      background: transparent;
+      font-weight: bold;
+      color: #999;
+    }
+
+    .nav-item.active {
+      color: #262626;
+      border-top: 1px solid #262626;
+    }
+  }
+
+  .post-stat {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    top: 0;
+    opacity: 0;
+  }
+
+  .col-4:hover .post-stat {
+    background-color: rgba(0,0,0,.3);
+    opacity: 1;
+  }
+
+  .image-preview {
+    margin-bottom: 30px;
+  }
+}
