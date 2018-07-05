@@ -4,7 +4,12 @@
       <%= link_to "Delete comment", comment_path(comment),
         method: :delete, remote: true, class: "core-sprite delete-comment hide-text" %>
     <% end %>
-    <span><strong><%= comment.user.name %></strong></span>
+    <span>
+      <strong>
+        <%= link_to comment.user.name, user_path(comment.user),
+          class: "no-text-decoration normal-color" %>
+      </strong>
+    </span>
     <span><%= comment.content %></span>
   </div>
 <% end %>
