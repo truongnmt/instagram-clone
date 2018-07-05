@@ -1,0 +1,11 @@
+<% if users.present? %>
+  <% users.each do |user| %>
+    <%= link_to user_path(user), class: "no-text-decoration normal-color" do %>
+      <div class="search-result-item"><%= user.name %></div>
+    <% end %>
+  <% end %>
+<% else %>
+  <div class="p-3">
+    No results found.
+  </div>
+<% end %>

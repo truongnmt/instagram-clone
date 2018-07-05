@@ -6,9 +6,12 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <form class="form-inline my-2 my-lg-0 ml-md-auto">
-        <input class="form-control mr-sm-2 text-center common-btn" type="search" placeholder="Search" aria-label="Search">
-      </form>
+      <%= form_tag users_path, method: :get, class: "form-inline my-2 my-lg-0 ml-md-auto", id: "users-search",
+        remote: true do %>
+        <%= text_field_tag :term, params[:term], class: "form-control mr-sm-2 text-center common-btn",
+          placeholder: "Search", autocomplete: "off" %>
+        <div id="users-result"></div>
+      <% end %>
       <ul class="navbar-nav ml-md-auto">
         <li class="nav-item">
           <a class="nav-link core-sprite explore-icon hide-text" href="#">Explore</a>
