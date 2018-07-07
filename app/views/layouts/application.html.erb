@@ -2,11 +2,10 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      <%= if content_for?(:title) then yield(:title) + ' • ' end %>
-      Instagram • Capture, edit & share photos, videos & messages with friends & family.
-    </title>
     <%= csrf_meta_tags %>
+    <%= display_meta_tags site: 'Instagram • Capture, edit & share photos, videos & messages with friends & family.',
+                          keywords: %w[udemy instagram clone],
+                          description: "Create an account or log in to Instagram - A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family."%>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">

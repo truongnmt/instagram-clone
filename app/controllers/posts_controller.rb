@@ -31,6 +31,7 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @is_liked = @post.is_liked(current_user)
     @is_bookmarked = @post.is_bookmarked(current_user)
+    set_meta_tags title: "Photo by "+@post.user.name
   end
 
   def destroy
