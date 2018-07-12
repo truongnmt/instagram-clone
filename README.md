@@ -1,6 +1,6 @@
 # How to build Instagram using Ruby on Rails
 
-This is source code for my course [How to build Instagram using Ruby on Rails]() 
+This is source code for my course: [How to build Instagram using Ruby on Rails](https://www.udemy.com/course/1648774/) 
 
 ## Demo
 Here is a working live demo: https://longram.herokuapp.com/
@@ -34,7 +34,7 @@ To fix a bug or enhance an existing module, follow these steps:
 - Add changes to reflect the changes made
 - Commit your changes (`git commit -am 'Improve feature'`)
 - Push to the branch (`git push origin improve-feature`)
-- Create a Pull Request 
+- Create a Pull Request
 
 ### Bug / Feature Request
 
@@ -43,7 +43,7 @@ If you find a bug, kindly open an issue [here](https://github.com/truongnmt/inst
 If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/truongnmt/instagram-udemy/issues/new). Please include sample queries and their corresponding results.
 
 
-## Built with 
+## Built with
 - Ruby 2.5
 - Rails 5.1.6+
 - jQuery - Ajax - jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
