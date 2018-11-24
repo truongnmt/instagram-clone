@@ -1,5 +1,5 @@
-<% likes.each.with_index do |like, index| %>
 <strong>
+<% likes.each.with_index do |like, index| %>
   <% if likes.size == 1 %>
     <%= like.user.name %> </strong> likes this
   <% elsif like == likes.last %>
@@ -14,3 +14,4 @@
     <%= like.user.name + ", " %>
   <% end %>
 <% end %>
+</strong>
