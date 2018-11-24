@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     if @post.save
       if params[:images]
         params[:images].each do |img|
-          @post.photos.create(image: params[:images][img])
+          @post.photos.create(image: img[1])
         end
       end
 
